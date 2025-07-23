@@ -1,0 +1,42 @@
+.header_wrapper {
+  display: flex;
+  width: 375px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  background-color: #f9f9f9;
+}
+
+.header_left {
+  width: 60%;
+  text-align: left;
+}
+
+.header_left button {
+  margin-left: 20px;
+}
+
+.image_logo {
+  margin-left: 15px;
+}
+
+.header_right {
+  width: 40%;
+  text-align: right;
+}
+
+.header_right button {
+  margin-right: 20px;
+}
+
+.image_profile {
+  width: 22px;
+  margin-right: 20px;
+}
+
+.header_left button,
+.header_right button {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
