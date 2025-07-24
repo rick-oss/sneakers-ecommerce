@@ -1,0 +1,30 @@
+.product_info {
+  width: 375px;
+  background-color: #f9f9f9;
+}
+
+.product_info p {
+  text-align: left;
+  color: var(--secondary-color);
+  margin: 0 20px 3px 21px;
+}
+
+.product_info h1 {
+  text-align: left;
+  text-wrap: wrap;
+  font-size: 25px;
+  color: var(--primary-color);
+  margin: 0 20px 0 20px;
+}
+
+.product_info .company_name {
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  padding-top: 20px;
+}
+
+.product_info .product_description {
+  padding-top: 10px;
+  font-size: 15px;
+}
