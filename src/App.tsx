@@ -12,6 +12,11 @@ function App() {
       <Header />
       <main className="app">
         <ProductGallery images={imageProduct1} />
+        <ProductInfo
+          companyName="Sneaker Company"
+          productTitle="Fall Limited Edition Sneakers"
+          productDescription="These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer."
+        />
       </main>
     </>
   );
