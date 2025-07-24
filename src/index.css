@@ -5,8 +5,11 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --primary-color: hsl(220, 13%, 13%);
+  --secondary-color: hsl(219, 9%, 45%);
+
   color-scheme: light dark;
-  background-color: #ccc;
+  background-color: #121212;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,9 +23,9 @@
   padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     color: rgba(255, 255, 255, 0.87);
     background-color: #121212;
   }
-}
+} */
