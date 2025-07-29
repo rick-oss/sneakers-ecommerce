@@ -6,7 +6,7 @@
 .product_info p {
   text-align: left;
   color: var(--secondary-color);
-  margin: 0 20px 3px 21px;
+  padding: 0 20px 3px 21px;
 }
 
 .product_info h1 {
@@ -26,5 +26,5 @@
 
 .product_info .product_description {
   padding-top: 10px;
-  font-size: 15px;
+  font-size: 0.9em;
 }
