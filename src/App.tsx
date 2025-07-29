@@ -9,7 +9,7 @@ import AddToCart from "./components/layout/AddToCart";
 
 function App() {
   return (
-    <>
+    <div style={{ width: "100%", maxWidth: "375px", margin: "0 auto" }}>
       <Header />
       <main className="app">
         <ProductGallery images={imageProduct1} />
