@@ -5,6 +5,7 @@ import imageProduct1 from "./assets/images/image-product-1.jpg";
 import Header from "./components/layout/Header";
 import ProductGallery from "./components/layout/ProductGallery";
 import ProductInfo from "./components/layout/ProductInfo";
+import AddToCart from "./components/layout/AddToCart";
 
 function App() {
   return (
