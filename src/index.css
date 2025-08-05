@@ -5,6 +5,8 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --light-bg-color: hsl(0, 0%, 100%);
+
   --primary-color: hsl(220, 13%, 13%);
   --secondary-color: hsl(219, 9%, 45%);
 
