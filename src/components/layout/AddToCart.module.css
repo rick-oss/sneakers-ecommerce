@@ -1,9 +1,8 @@
 .add_to_cart {
   width: 375px;
-  background-color: #f9f9f9;
   color: var(--primary-color);
   font-weight: 700;
-  padding-top: 10px;
+  padding: 10px 0 20px 0;
 }
 
 .price_container {
@@ -44,7 +43,7 @@
   margin: 20px 20px 0;
   padding: 12px 5%;
   border-radius: 10px;
-  background-color: hsl(220, 14%, 75%);
+  background-color: hsl(223, 64%, 98%);
 }
 
 .add_to_cart button {
