@@ -2,14 +2,14 @@ import "./App.css";
 
 import imageProduct1 from "./assets/images/image-product-1.jpg";
 
-import Header from "./components/layout/Header";
+import Header from "./components/header/Header";
 import ProductGallery from "./components/layout/ProductGallery";
 import ProductInfo from "./components/layout/ProductInfo";
 import AddToCart from "./components/layout/AddToCart";
 
 function App() {
   return (
-    <div style={{ width: "100%", maxWidth: "375px", margin: "0 auto", border: "1px solid red" }}>
+    <div style={{ width: "100%", maxWidth: "375px", margin: "0 auto" }}>
       <Header />
       <main className="app">
         <ProductGallery images={imageProduct1} />
