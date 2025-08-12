@@ -1,0 +1,39 @@
+.drawer_menu {
+  position: fixed;
+  width: 375px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 0%, 0.75);
+  z-index: 999;
+}
+
+.drawer_menu nav {
+  width: 60%;
+  height: 100%;
+  padding: 20px 0 0 25px;
+  background-color: var(--light-bg-color);
+}
+
+.drawer_menu nav button {
+  border: none;
+  background: none;
+	cursor: pointer;
+}
+
+.icon_button {
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+.drawer_menu nav ul {
+  list-style: none;
+  margin-top: 30px;
+}
+
+.drawer_menu nav ul li {
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: var(--primary-color);
+  cursor: pointer;
+}
