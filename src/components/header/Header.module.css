@@ -38,4 +38,5 @@
   border: none;
   cursor: pointer;
   background: none;
+  -webkit-tap-highlight-color: transparent; /* Previne o efeito de highlight no mobile */
 }
