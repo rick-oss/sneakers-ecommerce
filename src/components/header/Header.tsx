@@ -42,7 +42,9 @@ function Header() {
         <img className={styles.image_profile} src={imageAvatar} alt="imagem de perfil" />
       </div>
 
-      {isDrawerOpen && <DrawerMenu onclose={closeDrawer}/>}
+      {isDrawerOpen && (
+        <DrawerMenu onclose={closeDrawer} menuLinks={["Collections", "Men", "Woman", "About", "Contact"]} />
+      )}
     </header>
   );
 }
