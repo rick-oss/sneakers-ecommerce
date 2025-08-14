@@ -13,12 +13,13 @@
   height: 100%;
   padding: 20px 0 0 25px;
   background-color: var(--light-bg-color);
+  animation: slide-right 0.4s ease-out forwards;
 }
 
 .drawer_menu nav button {
   border: none;
   background: none;
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .icon_button {
@@ -36,4 +37,13 @@
   font-weight: 700;
   color: var(--primary-color);
   cursor: pointer;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
