@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 
 import DrawerMenu from "../common/DrawerMenu";
@@ -11,9 +11,16 @@ import imageAvatar from "../../assets/images/image-avatar.png";
 function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
+  useEffect(() => {
+    if (isDrawerOpen) {
+      document.body.style.overflow = "hidden"; // Previne o scroll da página quando o drawer está aberto
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isDrawerOpen]);
+
   const openDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
-    console.log("Drawer toggled!");
   };
 
   const closeDrawer = () => {
