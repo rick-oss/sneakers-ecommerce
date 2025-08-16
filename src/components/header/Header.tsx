@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 
 import DrawerMenu from "../common/DrawerMenu";
+import CartDropDown from "../common/CartDropDown";
 
 import logo from "../../assets/images/logo.svg";
 import iconCart from "../../assets/images/icon-cart.svg";
