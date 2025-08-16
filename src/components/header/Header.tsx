@@ -22,7 +22,7 @@ function Header() {
   }, [isDrawerOpen]);
 
   const openDrawer = () => {
-    setIsDrawerOpen(!isDrawerOpen);
+    setIsDrawerOpen(true);
   };
 
   const closeDrawer = () => {
