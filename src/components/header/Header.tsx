@@ -29,6 +29,10 @@ function Header() {
     setIsDrawerOpen(false);
   };
 
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
   return (
     <header className={styles.header_wrapper}>
       <div className={styles.header_left}>
@@ -38,15 +42,17 @@ function Header() {
         <img className={styles.image_logo} src={logo} alt="sneakers logo" />
       </div>
       <div className={styles.header_right}>
-        <button aria-label="Cart">
+        <button aria-label="Cart" onClick={toggleCart}>
           <img src={iconCart} alt="" />
         </button>
-        <img className={styles.image_profile} src={imageAvatar} alt="imagem de perfil" />
+        <img className={styles.image_profile} src={imageAvatar} alt="profile image" />
       </div>
 
       {isDrawerOpen && (
         <DrawerMenu onclose={closeDrawer} menuLinks={["Collections", "Men", "Woman", "About", "Contact"]} />
       )}
+
+      {isCartOpen && <CartDropDown isOpen={isCartOpen} />}
     </header>
   );
 }
