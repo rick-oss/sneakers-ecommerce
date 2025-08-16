@@ -11,6 +11,7 @@ import imageAvatar from "../../assets/images/image-avatar.png";
 
 function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   useEffect(() => {
     if (isDrawerOpen) {
