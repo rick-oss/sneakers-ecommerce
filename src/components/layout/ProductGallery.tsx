@@ -1,20 +1,36 @@
+import { useState } from "react";
+
 import styles from "./ProductGallery.module.css";
 
 import iconNext from "../../assets/images/icon-next.svg";
 import iconPrevious from "../../assets/images/icon-previous.svg";
 
 interface ProductGalleryProps {
-  images: string;
+  images: string[];
 }
 
 function ProductGallery({ images }: ProductGalleryProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex < images.length - 1 ? prevIndex + 1 : prevIndex));
+  };
+
+  const handlePrevious = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex != 0 ? prevIndex - 1 : prevIndex));
+  };
+
   return (
     <section className={styles.product_gallery}>
-      <button className={styles.button_previous}>
+      <button className={styles.button_previous} onClick={handlePrevious}>
         <img src={iconPrevious} alt="" />
       </button>
-      <img className={styles.product_image} src={images} alt="" />
-      <button className={styles.button_next}>
+      <div className={styles.image_container} style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
+        {images.map((image, index) => (
+          <img src={image} key={index} alt="Imagem do produto" />
+        ))}
+      </div>
+      <button className={styles.button_next} onClick={handleNext}>
         <img src={iconNext} alt="" />
       </button>
     </section>
