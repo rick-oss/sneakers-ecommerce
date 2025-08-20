@@ -38,12 +38,11 @@ function AddToCart({ onAdd }: AddToCartProps) {
     }
   }, [quantity]);
 
-function AddToCart() {
   return (
     <section className={styles.add_to_cart}>
       <div className={styles.price_container}>
         <div className={styles.left_side}>
-          <span className={styles.price}>$125.00</span>
+          <span className={styles.price}>${price.toFixed(2)}</span>
           <span className={styles.discount}>50%</span>
         </div>
         <del className={styles.original_price}>$250.00</del>
