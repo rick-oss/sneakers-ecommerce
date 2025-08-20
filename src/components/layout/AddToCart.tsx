@@ -45,14 +45,14 @@ function AddToCart({ onAdd }: AddToCartProps) {
           <span className={styles.price}>${price.toFixed(2)}</span>
           <span className={styles.discount}>50%</span>
         </div>
-        <del className={styles.original_price}>$250.00</del>
+        <del className={styles.original_price}>${originalPrice.toFixed(2)}</del>
       </div>
       <div className={styles.quantity_container}>
-        <button className={styles.minus_button}>
+        <button className={styles.minus_button} onClick={handleDecrease}>
           <img src={iconMinus} alt="Icone de diminuir número de produtos desejados" />
         </button>
-        <span className={styles.quantity}>0</span>
-        <button className={styles.plus_button}>
+        <span className={styles.quantity}>{quantity}</span>
+        <button className={styles.plus_button} onClick={handleIncrease}>
           <img src={iconPlus} alt="Icone de aumentar número de produtos desejados" />
         </button>
       </div>
