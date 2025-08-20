@@ -56,7 +56,19 @@ function AddToCart({ onAdd }: AddToCartProps) {
           <img src={iconPlus} alt="Icone de aumentar número de produtos desejados" />
         </button>
       </div>
-      <button className={styles.add_button}>
+      <button
+        className={styles.add_button}
+        onClick={() =>
+          onAdd({
+            id: 1,
+            image: imageProduct1,
+            productName: "Fall Limited Edition Sneakers",
+            productPrice: 125,
+            productQuantity: quantity,
+            totalPrice: price,
+          })
+        }
+      >
         <img src={iconCart} alt="Icone de carrinho" />
         <p>Add to cart</p>
       </button>
