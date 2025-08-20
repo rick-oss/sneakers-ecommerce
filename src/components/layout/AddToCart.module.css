@@ -50,6 +50,12 @@
   border: none;
   background: none;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.add_to_cart button:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
 }
 
 .minus_button {

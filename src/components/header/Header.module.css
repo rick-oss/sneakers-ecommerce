@@ -40,3 +40,9 @@
   background: none;
   -webkit-tap-highlight-color: transparent; /* Previne o efeito de highlight no mobile */
 }
+
+.header_left button:active,
+.header_right button:active {
+  transform: scale(0.95); /* Efeito de clique */
+  transition: transform 0.1s ease;
+}
