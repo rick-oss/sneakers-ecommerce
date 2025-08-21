@@ -1,7 +1,16 @@
 import { useState, useEffect } from "react";
+import type { CartProduct } from "../../context/cartProduct";
+
+import { FaTrashCan } from "react-icons/fa6";
+
 import styles from "./CartDropDown.module.css";
 
-function CartDropDown({ isOpen }: { isOpen: boolean }) {
+interface CartDropDownProps {
+  isOpen: boolean;
+  cartItems: CartProduct[];
+}
+
+function CartDropDown({ isOpen, cartItems }: CartDropDownProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   // Muda a visibilidade apenas quando o componente é aberto
