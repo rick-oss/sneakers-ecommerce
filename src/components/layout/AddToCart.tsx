@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import type { CartProduct } from "../../context/cartProduct";
 
 import styles from "./AddToCart.module.css";
 
@@ -8,14 +9,7 @@ import iconCart from "../../assets/images/icon-cart.svg";
 import imageProduct1 from "../../assets/images/image-product-1.jpg";
 
 interface AddToCartProps {
-  onAdd: (product: {
-    id: number;
-    image: string;
-    productName: string;
-    productPrice: number;
-    productQuantity: number;
-    totalPrice: number;
-  }) => void;
+  onAdd: (product: CartProduct) => void;
 }
 
 function AddToCart({ onAdd }: AddToCartProps) {

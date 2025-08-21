@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import type { CartProduct } from "../context/cartProduct";
 
 import styles from "./ProductPage.module.css";
 
@@ -14,25 +15,9 @@ import imageProduct4 from "../assets/images/image-product-4.jpg";
 
 function ProductPage() {
   const images = [imageProduct1, imageProduct2, imageProduct3, imageProduct4];
-  const [cartProducts, setCartProducts] = useState([
-    {
-      id: 0,
-      image: "",
-      productName: "",
-      productPrice: 0,
-      productQuantity: 0,
-      totalPrice: 0,
-    },
-  ]);
+  const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
 
-  const handleAddToCart = (product: {
-    id: number;
-    image: string;
-    productName: string;
-    productPrice: number;
-    productQuantity: number;
-    totalPrice: number;
-  }) => {
+  const handleAddToCart = (product: CartProduct) => {
     const existingProduct = cartProducts.find((item) => item.id === product.id);
 
     if (existingProduct) {
@@ -40,7 +25,7 @@ function ProductPage() {
         cartProduct.id === product.id
           ? {
               ...cartProduct,
-              quantity: cartProduct.productQuantity + product.productQuantity,
+              productQuantity: cartProduct.productQuantity + product.productQuantity,
               totalPrice: cartProduct.productPrice * (cartProduct.productQuantity + product.productQuantity),
             }
           : cartProduct
@@ -57,7 +42,7 @@ function ProductPage() {
 
   return (
     <div className={styles.product_page}>
-      <Header />
+      <Header cartItems={cartProducts} />
       <main className="app">
         <ProductGallery images={images} />
         <ProductInfo

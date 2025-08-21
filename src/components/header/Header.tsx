@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import type { CartProduct } from "../../context/cartProduct";
+
 import styles from "./Header.module.css";
 
 import DrawerMenu from "../common/DrawerMenu";
@@ -9,7 +11,11 @@ import iconCart from "../../assets/images/icon-cart.svg";
 import iconMenu from "../../assets/images/icon-menu.svg";
 import imageAvatar from "../../assets/images/image-avatar.png";
 
-function Header() {
+interface HeaderProps {
+  cartItems: CartProduct[];
+}
+
+function Header({ cartItems }: HeaderProps) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
@@ -52,7 +58,7 @@ function Header() {
         <DrawerMenu onclose={closeDrawer} menuLinks={["Collections", "Men", "Woman", "About", "Contact"]} />
       )}
 
-      {isCartOpen && <CartDropDown isOpen={isCartOpen} />}
+      {isCartOpen && <CartDropDown isOpen={isCartOpen} cartItems={cartItems} />}
     </header>
   );
 }
