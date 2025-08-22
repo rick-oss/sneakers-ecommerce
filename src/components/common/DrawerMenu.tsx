@@ -1,4 +1,5 @@
 import ReactDom from "react-dom";
+import { useState } from "react";
 import { FaX } from "react-icons/fa6";
 
 import styles from "./DrawerMenu.module.css";
@@ -10,6 +11,7 @@ interface DrawerMenuProps {
 
 function DrawerMenu({ onclose, menuLinks }: DrawerMenuProps) {
   const drawerMenu = document.getElementById("drawer-root");
+  const [active, setActive] = useState("Collections");
 
   if (!drawerMenu) return null;
 
@@ -21,7 +23,11 @@ function DrawerMenu({ onclose, menuLinks }: DrawerMenuProps) {
         </button>
         <ul>
           {menuLinks.map((link, index) => (
-            <li key={index}>{link}</li>
+            <li key={index} className={`${styles.nav_link} ${active === link ? styles.active : ""}`}>
+              <a href="#" onClick={() => setActive(link)}>
+                {link}
+              </a>
+            </li>
           ))}
         </ul>
       </nav>
