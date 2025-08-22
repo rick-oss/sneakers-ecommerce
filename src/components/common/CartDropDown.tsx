@@ -8,9 +8,10 @@ import styles from "./CartDropDown.module.css";
 interface CartDropDownProps {
   isOpen: boolean;
   cartItems: CartProduct[];
+  onRemove: (id: number) => void;
 }
 
-function CartDropDown({ isOpen, cartItems }: CartDropDownProps) {
+function CartDropDown({ isOpen, cartItems, onRemove }: CartDropDownProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   // Muda a visibilidade apenas quando o componente é aberto
@@ -39,14 +40,14 @@ function CartDropDown({ isOpen, cartItems }: CartDropDownProps) {
                     <strong>${item.totalPrice.toFixed(2)}</strong>
                   </p>
                 </div>
-                <button>
+                <button onClick={() => onRemove(item.id)}>
                   <FaTrashCan />
                 </button>
               </article>
             </li>
           ))
         ) : (
-          <li>Your cart is empty.</li>
+          <li className={styles.empty_cart}>Your cart is empty.</li>
         )}
       </ul>
       {cartItems.length > 0 && <button className={styles.checkout_button}>Checkout</button>}
