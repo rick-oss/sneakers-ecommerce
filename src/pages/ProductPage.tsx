@@ -48,7 +48,7 @@ function ProductPage() {
 
   return (
     <div className={styles.product_page}>
-      <Header cartItems={cartProducts} />
+      <Header cartItems={cartProducts} removeItem={handleRemoveItem} />
       <main className="app">
         <ProductGallery images={images} />
         <ProductInfo
