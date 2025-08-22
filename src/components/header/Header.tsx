@@ -12,9 +12,10 @@ import imageAvatar from "../../assets/images/image-avatar.png";
 
 interface HeaderProps {
   cartItems: CartProduct[];
+  removeItem: (id: number) => void;
 }
 
-function Header({ cartItems }: HeaderProps) {
+function Header({ cartItems, removeItem }: HeaderProps) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
