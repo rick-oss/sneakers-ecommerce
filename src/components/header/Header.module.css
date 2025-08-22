@@ -3,16 +3,17 @@
   width: 375px;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
 .header_left {
   width: 60%;
   text-align: left;
+  padding: 5px 0;
 }
 
 .header_left button {
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 .image_logo {
@@ -25,12 +26,30 @@
 }
 
 .header_right button {
+  position: relative;
   margin-right: 20px;
+  padding: 5px 0;
+  color: #69707d;
+}
+
+.header_right button.has_items {
+  color: hsl(220, 13%, 13%);
+}
+
+.header_right button span {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  font-size: 10px;
+  padding: 0 5px;
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  background: var(--button-bg-color);
 }
 
 .image_profile {
   width: 22px;
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .header_left button,
