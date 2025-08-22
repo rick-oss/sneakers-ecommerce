@@ -66,10 +66,10 @@ function Header({ cartItems, removeItem }: HeaderProps) {
       </div>
 
       {isDrawerOpen && (
-        <DrawerMenu onclose={closeDrawer} menuLinks={["Collections", "Men", "Woman", "About", "Contact"]} />
+        <DrawerMenu onclose={closeDrawer} menuLinks={["Collections", "Men", "Women", "About", "Contact"]} />
       )}
 
-      {isCartOpen && <CartDropDown isOpen={isCartOpen} cartItems={cartItems} />}
+      {isCartOpen && <CartDropDown isOpen={isCartOpen} cartItems={cartItems} onRemove={removeItem} />}
     </header>
   );
 }
