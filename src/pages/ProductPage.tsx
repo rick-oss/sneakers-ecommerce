@@ -20,19 +20,21 @@ function ProductPage() {
   const handleAddToCart = (product: CartProduct) => {
     const existingProduct = cartProducts.find((item) => item.id === product.id);
 
-    if (existingProduct) {
-      const updatedCart = cartProducts.map((cartProduct) =>
-        cartProduct.id === product.id
-          ? {
-              ...cartProduct,
-              productQuantity: cartProduct.productQuantity + product.productQuantity,
-              totalPrice: cartProduct.productPrice * (cartProduct.productQuantity + product.productQuantity),
-            }
-          : cartProduct
-      );
-      setCartProducts(updatedCart);
-    } else {
-      setCartProducts([...cartProducts, { ...product }]);
+    if (product.productQuantity > 0) {
+      if (existingProduct) {
+        const updatedCart = cartProducts.map((cartProduct) =>
+          cartProduct.id === product.id
+            ? {
+                ...cartProduct,
+                productQuantity: cartProduct.productQuantity + product.productQuantity,
+                totalPrice: cartProduct.productPrice * (cartProduct.productQuantity + product.productQuantity),
+              }
+            : cartProduct
+        );
+        setCartProducts(updatedCart);
+      } else {
+        setCartProducts([...cartProducts, { ...product }]);
+      }
     }
   };
 
