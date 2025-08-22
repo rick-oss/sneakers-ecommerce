@@ -38,6 +38,10 @@ function ProductPage() {
     }
   };
 
+  const handleRemoveItem = (id: number) => {
+    setCartProducts((prev) => prev.filter((item) => item.id !== id));
+  };
+
   useEffect(() => {
     console.log("Cart updated:", cartProducts);
   }, [cartProducts]);
