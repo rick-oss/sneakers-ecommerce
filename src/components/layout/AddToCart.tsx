@@ -5,7 +5,6 @@ import styles from "./AddToCart.module.css";
 
 import iconMinus from "../../assets/images/icon-minus.svg";
 import iconPlus from "../../assets/images/icon-plus.svg";
-import iconCart from "../../assets/images/icon-cart.svg";
 import imageProduct1 from "../../assets/images/image-product-1.jpg";
 
 interface AddToCartProps {
