@@ -7,7 +7,6 @@ import DrawerMenu from "../common/DrawerMenu";
 import CartDropDown from "../common/CartDropDown";
 
 import logo from "../../assets/images/logo.svg";
-import iconCart from "../../assets/images/icon-cart.svg";
 import iconMenu from "../../assets/images/icon-menu.svg";
 import imageAvatar from "../../assets/images/image-avatar.png";
 
