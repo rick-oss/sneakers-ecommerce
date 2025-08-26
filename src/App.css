@@ -1,6 +1,7 @@
 #root {
+  display: flex;
+  justify-content: center;
   max-width: 1440px;
-  margin: 0 auto;
   text-align: center;
   background-color: var(--light-bg-color);
 }
