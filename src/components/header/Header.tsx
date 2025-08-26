@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import type { CartProduct } from "../../context/cartProduct";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 import styles from "./Header.module.css";
 
 import DrawerMenu from "../common/DrawerMenu";
 import CartDropDown from "../common/CartDropDown";
+import DesktopNavbar from "../common/DesktopNavbar";
 
 import logo from "../../assets/images/logo.svg";
 import iconMenu from "../../assets/images/icon-menu.svg";
