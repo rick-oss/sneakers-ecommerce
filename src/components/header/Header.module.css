@@ -1,6 +1,7 @@
 .header_wrapper {
   display: flex;
-  width: 375px;
+  width: 100%;
+  max-width: 450px;
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
@@ -17,6 +18,7 @@
 }
 
 .image_logo {
+  height: 20px;
   margin-left: 15px;
 }
 
@@ -64,4 +66,39 @@
 .header_right button:active {
   transform: scale(0.95); /* Efeito de clique */
   transition: transform 0.1s ease;
+}
+
+/* Media Queries*/
+
+@media (min-width: 1024px) {
+  .header_wrapper {
+    max-width: 1024px;
+    padding: 25px 0;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+  }
+
+  .header_left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .image_logo {
+    margin-left: 0;
+  }
+
+  .header_right {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+
+  .header_right button {
+    margin-right: 40px;
+  }
+
+  .image_profile {
+    width: 45px;
+    margin-right: 0;
+  }
 }
