@@ -21,6 +21,8 @@ function Header({ cartItems, removeItem }: HeaderProps) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
+
   useEffect(() => {
     if (isDrawerOpen) {
       document.body.style.overflow = "hidden"; // Previne o scroll da página quando o drawer está aberto
@@ -41,13 +43,25 @@ function Header({ cartItems, removeItem }: HeaderProps) {
     setIsCartOpen(!isCartOpen);
   };
 
+  const renderMenu = () => {
+    if (isDesktop) return <DesktopNavbar menuLinks={["Collections", "Men", "Women", "About", "Contact"]} />;
+    return (
+      isDrawerOpen && (
+        <DrawerMenu onclose={closeDrawer} menuLinks={["Collections", "Men", "Women", "About", "Contact"]} />
+      )
+    );
+  };
+
   return (
     <header className={styles.header_wrapper}>
       <div className={styles.header_left}>
-        <button aria-label="Menu" onClick={openDrawer}>
-          <img src={iconMenu} alt="" />
-        </button>
+        {!isDesktop && (
+          <button aria-label="Menu" onClick={openDrawer}>
+            <img src={iconMenu} alt="" />
+          </button>
+        )}
         <img className={styles.image_logo} src={logo} alt="sneakers logo" />
+        {renderMenu()}
       </div>
       <div className={styles.header_right}>
         <button
