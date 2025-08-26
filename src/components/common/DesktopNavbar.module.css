@@ -1,0 +1,10 @@
+.desktop_navbar {
+  padding-right: 20px;
+}
+
+.desktop_navbar ul {
+  display: flex;
+  gap: 30px;
+  color: var(--secondary-color);
+  list-style: none;
+}
