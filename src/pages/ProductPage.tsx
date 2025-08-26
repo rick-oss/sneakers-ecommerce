@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import type { CartProduct } from "../context/cartProduct";
 
 import styles from "./ProductPage.module.css";
@@ -42,22 +42,20 @@ function ProductPage() {
     setCartProducts((prev) => prev.filter((item) => item.id !== id));
   };
 
-  useEffect(() => {
-    console.log("Cart updated:", cartProducts);
-  }, [cartProducts]);
-
   return (
     <div className={styles.product_page}>
       <Header cartItems={cartProducts} removeItem={handleRemoveItem} />
-      <main className="app">
+      <main className={styles.main_content}>
         <ProductGallery images={images} />
-        <ProductInfo
-          companyName="Sneaker Company"
-          productTitle="Fall Limited Edition Sneakers"
-          productDescription="These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer."
-        />
+        <section className={styles.main_section}>
+          <ProductInfo
+            companyName="Sneaker Company"
+            productTitle="Fall Limited Edition Sneakers"
+            productDescription="These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer."
+          />
+          <AddToCart onAdd={handleAddToCart} />
+        </section>
       </main>
-      <AddToCart onAdd={handleAddToCart} />
     </div>
   );
 }
