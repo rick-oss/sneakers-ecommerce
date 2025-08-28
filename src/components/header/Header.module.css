@@ -8,7 +8,6 @@
 }
 
 .header_left {
-  width: 60%;
   text-align: left;
   padding: 5px 0;
 }
@@ -23,7 +22,6 @@
 }
 
 .header_right {
-  width: 40%;
   text-align: right;
 }
 
@@ -72,15 +70,14 @@
 
 @media (min-width: 1024px) {
   .header_wrapper {
-    max-width: 1024px;
-    padding: 25px 0;
+    max-width: 100%;
+    padding: 30px 0;
     border-bottom: 1px solid hsl(220, 14%, 75%);
   }
 
   .header_left {
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
 
   .image_logo {
