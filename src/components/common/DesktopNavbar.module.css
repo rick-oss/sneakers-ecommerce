@@ -1,10 +1,10 @@
 .desktop_navbar {
-  padding-right: 20px;
+  margin-left: 60px;
 }
 
 .desktop_navbar ul {
   display: flex;
-  gap: 30px;
+  gap: 35px;
   color: var(--secondary-color);
   list-style: none;
 }
