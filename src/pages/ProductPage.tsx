@@ -15,9 +15,35 @@ import imageProduct2 from "../assets/images/image-product-2.jpg";
 import imageProduct3 from "../assets/images/image-product-3.jpg";
 import imageProduct4 from "../assets/images/image-product-4.jpg";
 
+import imageThumbnail1 from "../assets/images/image-product-1-thumbnail.jpg";
+import imageThumbnail2 from "../assets/images/image-product-2-thumbnail.jpg";
+import imageThumbnail3 from "../assets/images/image-product-3-thumbnail.jpg";
+import imageThumbnail4 from "../assets/images/image-product-4-thumbnail.jpg";
+
 function ProductPage() {
-  const images = [imageProduct1, imageProduct2, imageProduct3, imageProduct4];
+  const mobileGallery = [imageProduct1, imageProduct2, imageProduct3, imageProduct4];
+  const desktopGallery = [
+    {
+      image: imageProduct1,
+      thumbnail: imageThumbnail1,
+    },
+    {
+      image: imageProduct2,
+      thumbnail: imageThumbnail2,
+    },
+    {
+      image: imageProduct3,
+      thumbnail: imageThumbnail3,
+    },
+    {
+      image: imageProduct4,
+      thumbnail: imageThumbnail4,
+    },
+  ];
+
   const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
+
+  const isDesktopScreen = useMediaQuery("(min-width: 1024px)");
 
   const handleAddToCart = (product: CartProduct) => {
     const existingProduct = cartProducts.find((item) => item.id === product.id);
