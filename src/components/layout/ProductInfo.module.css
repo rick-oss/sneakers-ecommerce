@@ -30,9 +30,22 @@
 }
 
 @media (min-width: 1024px) {
+  .product_info {
+    max-width: 100%;
+  }
+
   .product_info h1 {
     padding-right: 0;
-    font-size: 2.3em;
-    margin-bottom: 15px;
+    font-size: 2.9em;
+  }
+
+  .product_info .company_name {
+    font-size: 14px;
+    padding-top: 0;
+  }
+
+  .product_info .product_description {
+    font-size: 17px;
+    margin-top: 15px;
   }
 }
