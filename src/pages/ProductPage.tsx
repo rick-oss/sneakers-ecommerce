@@ -80,9 +80,9 @@ function ProductPage() {
 
   return (
     <div className={styles.product_page}>
-      <Header cartItems={cartProducts} removeItem={handleRemoveItem} />
+      <Header cartItems={cartProducts} removeItem={handleRemoveItem} isDesktop={isDesktopScreen} />
       <main className={styles.main_content}>
-        <ProductGallery images={images} />
+        {renderGallery()}
         <section className={styles.main_section}>
           <ProductInfo
             companyName="Sneaker Company"
