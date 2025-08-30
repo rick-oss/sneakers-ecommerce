@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import type { CartProduct } from "../../context/cartProduct";
-import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 import styles from "./Header.module.css";
 
@@ -15,13 +14,12 @@ import imageAvatar from "../../assets/images/image-avatar.png";
 interface HeaderProps {
   cartItems: CartProduct[];
   removeItem: (id: number) => void;
+  isDesktop: boolean;
 }
 
-function Header({ cartItems, removeItem }: HeaderProps) {
+function Header({ cartItems, removeItem, isDesktop }: HeaderProps) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
-
-  const isDesktop = useMediaQuery("(min-width: 1024px)");
 
   useEffect(() => {
     if (isDrawerOpen) {
