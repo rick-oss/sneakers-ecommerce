@@ -7,9 +7,15 @@
 
   .main_content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 60px;
-    margin-top: 70px;
-    border: 1px solid red;
+    margin-top: 85px;
+  }
+
+  .main_section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
