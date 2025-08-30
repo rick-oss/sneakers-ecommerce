@@ -1,0 +1,25 @@
+.desktop_gallery {
+  width: 50%;
+}
+
+.desktop_gallery .main_image {
+  width: 450px;
+  border-radius: 15px;
+}
+
+.thumbnail_images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.thumbnail_images button {
+  border: none;
+}
+
+.thumbnail_images img {
+  width: 90px;
+  border-radius: 10px;
+}
