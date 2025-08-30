@@ -94,12 +94,23 @@
 
 /* Media queries*/
 @media (min-width: 1024px) {
+  .add_to_cart {
+    max-width: 100%;
+  }
   .price_container {
     flex-direction: column;
   }
 
   .price_container .left_side {
     width: 100%;
+  }
+
+  .left_side .price {
+    font-size: 2em;
+  }
+
+  .left_side .discount {
+    margin-left: 20px;
   }
 
   .price_container .original_price {
@@ -116,12 +127,13 @@
   }
 
   .quantity_content {
-    width: 45%;
+    width: 30%;
     margin: 0 15px 0 20px;
     padding: 12px 3%;
   }
 
   .add_to_cart .add_button {
+    width: 55%;
     margin: 0;
   }
 }
