@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 import type { CartProduct } from "../context/cartProduct";
 
 import styles from "./ProductPage.module.css";
 
 import Header from "../components/header/Header";
-import ProductGallery from "../components/layout/ProductGallery";
+import ProductGallery from "../components/productGallery/MobileGallery";
+import DesktopProductGallery from "../components/productGallery/DesktopGallery";
 import ProductInfo from "../components/layout/ProductInfo";
 import AddToCart from "../components/layout/AddToCart";
 
