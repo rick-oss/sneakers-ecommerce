@@ -66,6 +66,14 @@ function ProductPage() {
     }
   };
 
+  const renderGallery = () => {
+    if (isDesktopScreen) {
+      return <DesktopProductGallery gallery={desktopGallery} />;
+    } else {
+      return <ProductGallery images={mobileGallery} />;
+    }
+  };
+
   const handleRemoveItem = (id: number) => {
     setCartProducts((prev) => prev.filter((item) => item.id !== id));
   };
