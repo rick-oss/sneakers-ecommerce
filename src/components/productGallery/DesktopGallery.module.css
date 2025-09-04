@@ -1,15 +1,19 @@
 .desktop_gallery {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .desktop_gallery .main_image {
-  width: 450px;
+  max-width: 85%;
   border-radius: 15px;
 }
 
 .thumbnail_images {
   display: flex;
   justify-content: center;
+  max-width: 85%;
   gap: 30px;
   margin-top: 20px;
   list-style: none;
@@ -17,9 +21,10 @@
 
 .thumbnail_images button {
   border: none;
+  background: none;
 }
 
-.thumbnail_images img {
-  width: 90px;
+.thumbnail_images button img {
+  max-width: 100%;
   border-radius: 10px;
 }
