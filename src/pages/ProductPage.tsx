@@ -43,7 +43,8 @@ function ProductPage() {
 
   const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
 
-  const isDesktopScreen = useMediaQuery("(min-width: 1024px)");
+  const isDesktopScreen = useMediaQuery("(min-width: 960px)");
+  const isTabletScreen = useMediaQuery("(min-width: 520px)");
 
   const handleAddToCart = (product: CartProduct) => {
     const existingProduct = cartProducts.find((item) => item.id === product.id);
@@ -80,7 +81,7 @@ function ProductPage() {
 
   return (
     <div className={styles.product_page}>
-      <Header cartItems={cartProducts} removeItem={handleRemoveItem} isDesktop={isDesktopScreen} />
+      <Header cartItems={cartProducts} removeItem={handleRemoveItem} isDesktop={isTabletScreen} />
       <main className={styles.main_content}>
         {renderGallery()}
         <section className={styles.main_section}>
