@@ -88,7 +88,7 @@
   font-weight: 900;
   color: var(--primary-color);
   cursor: pointer;
-  background: var(--button-bg-color);
+  background: var(--color-accent);
 }
 
 .empty_cart {
