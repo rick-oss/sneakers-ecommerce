@@ -14,7 +14,6 @@ interface AddToCartProps {
 function AddToCart({ onAdd }: AddToCartProps) {
   const [quantity, setQuantity] = useState(0);
   const [price, setPrice] = useState(125);
-  const [originalPrice, setOriginalPrice] = useState(250);
 
   const handleIncrease = () => {
     setQuantity((prev) => (prev < 99 ? prev + 1 : prev));
@@ -27,7 +26,6 @@ function AddToCart({ onAdd }: AddToCartProps) {
   useEffect(() => {
     if (quantity > 0) {
       setPrice(125 * quantity);
-      setOriginalPrice(250 * quantity);
     }
   }, [quantity]);
 
@@ -35,10 +33,10 @@ function AddToCart({ onAdd }: AddToCartProps) {
     <section className={styles.add_to_cart}>
       <div className={styles.price_container}>
         <div className={styles.left_side}>
-          <span className={styles.price}>${price.toFixed(2)}</span>
+          <span className={styles.price}>$125.00</span>
           <span className={styles.discount}>50%</span>
         </div>
-        <del className={styles.original_price}>${originalPrice.toFixed(2)}</del>
+        <del className={styles.original_price}>$250.00</del>
       </div>
       <div className={styles.add_items_container}>
         <div className={styles.quantity_content}>
