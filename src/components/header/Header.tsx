@@ -65,7 +65,7 @@ function Header({ cartItems, removeItem, isDesktop }: HeaderProps) {
         <button
           aria-label="Cart"
           onClick={toggleCart}
-          className={isCartOpen || cartItems[0]?.productQuantity > 0 ? styles.has_items : ""}
+          className={`${styles.cart_button} ${isCartOpen || cartItems[0]?.productQuantity > 0 ? styles.has_items : ""}`}
         >
           <svg width="22" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -76,7 +76,9 @@ function Header({ cartItems, removeItem, isDesktop }: HeaderProps) {
           </svg>
           {cartItems.length > 0 && <span>{cartItems[0].productQuantity}</span>}
         </button>
-        <img className={styles.image_profile} src={imageAvatar} alt="profile image" />
+        <button className={styles.button_profile}>
+          <img className={styles.image_profile} src={imageAvatar} alt="profile image" />
+        </button>
       </div>
 
       {isCartOpen && <CartDropDown isOpen={isCartOpen} cartItems={cartItems} onRemove={removeItem} />}
