@@ -40,8 +40,6 @@ function ProductPage() {
     },
   ];
 
-  const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
-
   const isDesktopScreen = useMediaQuery("(min-width: 960px)");
   const isTabletScreen = useMediaQuery("(min-width: 520px)");
 
