@@ -1,0 +1,60 @@
+.thumbnail_images {
+  display: flex;
+  justify-content: center;
+  max-width: 85%;
+  gap: 30px;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.thumbnail_images .thumbnail_button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+}
+
+.thumbnail_images .thumbnail_button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.thumbnail_images .thumbnail_button img {
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.thumbnail_button.active_thumbnail {
+  border: 2px solid var(--color-accent);
+}
+
+.thumbnail_button.active_thumbnail::after {
+  opacity: 1;
+}
+
+.lightbox_mode {
+  max-width: 35%;
+  margin-top: 40px;
+}
+
+@media (min-width: 1440px) {
+  .thumbnail_images {
+    margin-top: 30px;
+  }
+
+  .lightbox_mode {
+    max-width: 42%;
+  }
+}
