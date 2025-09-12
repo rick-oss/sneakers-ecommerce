@@ -43,6 +43,22 @@ function ProductPage() {
   const isDesktopScreen = useMediaQuery("(min-width: 960px)");
   const isTabletScreen = useMediaQuery("(min-width: 520px)");
 
+  const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [shake, setShake] = useState(false);
+
+  // Controla a navegação da galeria
+  // Previne que o index saia dos limites do array
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex < gallery.length - 1 ? prevIndex + 1 : prevIndex));
+  };
+
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) => (prevIndex != 0 ? prevIndex - 1 : prevIndex));
+  };
+
+  // Adiciona items ao carrinho
+  // Se o item já existir, apenas atualiza a quantidade
   const handleAddToCart = (product: CartProduct) => {
     const existingProduct = cartProducts.find((item) => item.id === product.id);
 
