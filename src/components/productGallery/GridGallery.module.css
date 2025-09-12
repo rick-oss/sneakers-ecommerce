@@ -1,0 +1,15 @@
+.grid_gallery {
+  width: 50%;
+}
+
+.grid_gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid_gallery .main_image {
+  max-width: 85%;
+  border-radius: 15px;
+  cursor: pointer;
+}
