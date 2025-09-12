@@ -9,9 +9,10 @@ import imageProduct1 from "../../assets/images/image-product-1.jpg";
 
 interface AddToCartProps {
   onAdd: (product: CartProduct) => void;
+  shake: boolean;
 }
 
-function AddToCart({ onAdd }: AddToCartProps) {
+function AddToCart({ onAdd, shake }: AddToCartProps) {
   const [quantity, setQuantity] = useState(0);
   const [price, setPrice] = useState(125);
 
@@ -39,7 +40,7 @@ function AddToCart({ onAdd }: AddToCartProps) {
         <del className={styles.original_price}>$250.00</del>
       </div>
       <div className={styles.add_items_container}>
-        <div className={styles.quantity_content}>
+        <div className={`${styles.quantity_input} ${shake ? styles.shake : ""}`}>
           <button className={styles.minus_button} onClick={handleDecrease}>
             <img src={iconMinus} alt="Icone de diminuir número de produtos desejados" />
           </button>
