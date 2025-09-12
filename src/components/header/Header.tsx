@@ -5,7 +5,7 @@ import styles from "./Header.module.css";
 
 import DrawerMenu from "../common/DrawerMenu";
 import CartDropDown from "../common/CartDropDown";
-import DesktopNavbar from "../common/DesktopNavbar";
+import Navbar from "../common/Navbar";
 
 import logo from "../../assets/images/logo.svg";
 import iconMenu from "../../assets/images/icon-menu.svg";
@@ -42,7 +42,7 @@ function Header({ cartItems, removeItem, isDesktop }: HeaderProps) {
   };
 
   const renderMenu = () => {
-    if (isDesktop) return <DesktopNavbar menuLinks={["Collections", "Men", "Women", "About", "Contact"]} />;
+    if (isDesktop) return <Navbar menuLinks={["Collections", "Men", "Women", "About", "Contact"]} />;
     return (
       isDrawerOpen && (
         <DrawerMenu onclose={closeDrawer} menuLinks={["Collections", "Men", "Women", "About", "Contact"]} />
