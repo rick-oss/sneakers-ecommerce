@@ -84,16 +84,33 @@ function ProductPage() {
     }
   };
 
-  const renderGallery = () => {
-    if (isDesktopScreen) {
-      return <DesktopProductGallery gallery={desktopGallery} />;
-    } else {
-      return <ProductGallery images={mobileGallery} />;
-    }
-  };
-
+  // Remove Item do Carrinho
   const handleRemoveItem = (id: number) => {
     setCartProducts((prev) => prev.filter((item) => item.id !== id));
+  };
+
+  // Renderiza condicionalmente a galeria
+  const renderGallery = () => {
+    if (isDesktopScreen) {
+      return (
+        <GridGallery
+          gallery={gallery}
+          currentImageIndex={currentIndex}
+          onChangeIndex={setCurrentIndex}
+          onPrev={handlePrevious}
+          onNext={handleNext}
+        />
+      );
+    } else {
+      return (
+        <CarouselGallery
+          gallery={gallery}
+          currentImageIndex={currentIndex}
+          onPrev={handlePrevious}
+          onNext={handleNext}
+        />
+      );
+    }
   };
 
   return (
