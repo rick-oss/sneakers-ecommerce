@@ -21,8 +21,7 @@ import imageThumbnail3 from "../assets/images/image-product-3-thumbnail.jpg";
 import imageThumbnail4 from "../assets/images/image-product-4-thumbnail.jpg";
 
 function ProductPage() {
-  const mobileGallery = [imageProduct1, imageProduct2, imageProduct3, imageProduct4];
-  const desktopGallery = [
+  const gallery = [
     {
       image: imageProduct1,
       thumbnail: imageThumbnail1,
