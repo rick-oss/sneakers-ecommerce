@@ -77,6 +77,10 @@ function ProductPage() {
       } else {
         setCartProducts([...cartProducts, { ...product }]);
       }
+    } else {
+      // Adiciona animação de shake quando tenta adicionar 0 items
+      setShake(true);
+      setTimeout(() => setShake(false), 500); // Remove a animação após 500ms
     }
   };
 
