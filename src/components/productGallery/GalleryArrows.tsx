@@ -12,10 +12,18 @@ type GalleryArrowsProps = {
 const GalleryArrows = ({ onPrev, onNext, variant = "mobile" }: GalleryArrowsProps) => {
   return (
     <>
-      <button className={`${styles.arrow} ${styles.left_arrow} ${styles[variant]}`} onClick={onPrev}>
+      <button
+        className={`${styles.arrow} ${styles.left_arrow} ${styles[variant]}`}
+        onClick={onPrev}
+        aria-label="Previous image"
+      >
         <img src={iconPrevious} alt="" />
       </button>
-      <button className={`${styles.arrow} ${styles.right_arrow} ${styles[variant]}`} onClick={onNext}>
+      <button
+        className={`${styles.arrow} ${styles.right_arrow} ${styles[variant]}`}
+        onClick={onNext}
+        aria-label="Next image"
+      >
         <img src={iconNext} alt="" />
       </button>
     </>
