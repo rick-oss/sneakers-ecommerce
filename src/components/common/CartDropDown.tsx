@@ -25,7 +25,7 @@ function CartDropDown({ isOpen, cartItems, onRemove }: CartDropDownProps) {
   if (!isOpen) return null;
 
   return (
-    <div className={`${styles.cart_dropdown} ${isVisible ? styles.show : ""}`}>
+    <div className={`${styles.cart_dropdown} ${isVisible ? styles.show : ""}`} role="dialog" aria-modal="false">
       <div className={styles.cart_dropdown_content}>
         <p className={styles.cart_title}>Cart</p>
         <ul className={styles.cart_items}>
