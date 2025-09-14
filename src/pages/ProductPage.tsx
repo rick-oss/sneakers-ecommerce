@@ -104,7 +104,7 @@ function ProductPage() {
     } else {
       return (
         <CarouselGallery
-          gallery={gallery}
+          images={gallery.map((item) => item.image)}
           currentImageIndex={currentIndex}
           onPrev={handlePrevious}
           onNext={handleNext}
