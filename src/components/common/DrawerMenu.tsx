@@ -16,7 +16,7 @@ function DrawerMenu({ onclose, menuLinks }: DrawerMenuProps) {
   if (!drawerMenu) return null;
 
   return ReactDom.createPortal(
-    <aside className={styles.drawer_menu}>
+    <aside className={styles.drawer_menu} aria-label="Side menu">
       <nav>
         <button onClick={onclose} aria-label="Close Menu">
           <FaX className={styles.icon_button} />
