@@ -25,7 +25,7 @@ function Lightbox({ lightboxGallery, currentIndex, onChangeIndex, onClose, onPre
 
   if (!lightbox) return null;
   return ReactDom.createPortal(
-    <section className={styles.lightbox}>
+    <section className={styles.lightbox} role="dialog" aria-modal="true">
       <div className={styles.lightbox_content}>
         <div className={styles.close_lightbox}>
           <button onClick={onClose}>
