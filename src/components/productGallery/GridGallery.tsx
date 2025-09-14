@@ -40,7 +40,7 @@ function GridGallery({ gallery, currentImageIndex, onChangeIndex, onPrev, onNext
       <Thumbnails gallery={gallery} onSelect={setMainImage} />
       {isLightboxOpen && (
         <Lightbox
-          lightboxImages={gallery}
+          lightboxGallery={gallery}
           currentIndex={currentImageIndex}
           onChangeIndex={onChangeIndex}
           onClose={handleCloseLightbox}

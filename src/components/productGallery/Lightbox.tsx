@@ -6,13 +6,13 @@ import styles from "./Lightbox.module.css";
 import CarouselGallery from "./CarouselGallery";
 import Thumbnails from "./Thumbnails";
 
-interface lightboxImagesItems {
+interface lightboxGalleryItems {
   image: string;
   thumbnail: string;
 }
 
 interface LightboxProps {
-  lightboxImages: lightboxImagesItems[];
+  lightboxGallery: lightboxGalleryItems[];
   currentIndex?: number;
   onChangeIndex?: (index: number) => void;
   onClose?: () => void;
@@ -20,7 +20,7 @@ interface LightboxProps {
   onNext?: () => void;
 }
 
-function Lightbox({ lightboxImages, currentIndex, onChangeIndex, onClose, onPrev, onNext }: LightboxProps) {
+function Lightbox({ lightboxGallery, currentIndex, onChangeIndex, onClose, onPrev, onNext }: LightboxProps) {
   const lightbox = document.getElementById("lightbox");
 
   if (!lightbox) return null;
@@ -32,8 +32,18 @@ function Lightbox({ lightboxImages, currentIndex, onChangeIndex, onClose, onPrev
             <FaX className={styles.icon_button} />
           </button>
         </div>
-        <CarouselGallery gallery={lightboxImages} currentImageIndex={currentIndex} onPrev={onPrev} onNext={onNext} />
-        <Thumbnails gallery={lightboxImages} currentImageIndex={currentIndex} onChangeIndex={onChangeIndex}  mode="lightbox" />
+        <CarouselGallery
+          images={lightboxGallery.map((item) => item.image)}
+          currentImageIndex={currentIndex}
+          onPrev={onPrev}
+          onNext={onNext}
+        />
+        <Thumbnails
+          gallery={lightboxGallery}
+          currentImageIndex={currentIndex}
+          onChangeIndex={onChangeIndex}
+          mode="lightbox"
+        />
       </div>
     </section>,
     lightbox
