@@ -1,6 +1,7 @@
 .drawer_menu {
   position: fixed;
-  width: 375px;
+  width: 100%;
+  max-width: 520px;
   height: 100%;
   top: 0;
   left: 0;

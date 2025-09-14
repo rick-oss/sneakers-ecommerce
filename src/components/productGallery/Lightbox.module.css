@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: center;
@@ -67,13 +67,12 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1440px) and (min-height: 850px) {
   .lightbox .lightbox_content {
     height: 85%;
   }
 
   .lightbox .close_lightbox {
-    width: 50%;
     padding-bottom: 20px;
   }
 

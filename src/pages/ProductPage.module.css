@@ -49,7 +49,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1440px) and (min-height: 850px) {
   .main_content {
     margin-top: 85px;
   }
