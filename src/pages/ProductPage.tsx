@@ -45,7 +45,7 @@ function ProductPage() {
 
   const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [shake, setShake] = useState(false);
+  const [animationShake, setAnimationShake] = useState(false);
 
   // Controla a navegação da galeria
   // Previne que o index saia dos limites do array
@@ -78,9 +78,9 @@ function ProductPage() {
         setCartProducts([...cartProducts, { ...product }]);
       }
     } else {
-      // Adiciona animação de shake quando tenta adicionar 0 items
-      setShake(true);
-      setTimeout(() => setShake(false), 500); // Remove a animação após 500ms
+      // Adiciona animação de animationShake quando tenta adicionar 0 items
+      setAnimationShake(true);
+      setTimeout(() => setAnimationShake(false), 500); // Remove a animação após 500ms
     }
   };
 
@@ -124,7 +124,7 @@ function ProductPage() {
             productTitle="Fall Limited Edition Sneakers"
             productDescription="These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer."
           />
-          <AddToCart onAdd={handleAddToCart} shake={shake} />
+          <AddToCart onAdd={handleAddToCart} shake={animationShake} />
         </section>
       </main>
     </div>
