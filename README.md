@@ -8,7 +8,7 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
+    - [Screenshots](#screenshots)
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
@@ -30,11 +30,15 @@ Users should be able to:
 - Add items to the cart
 - View the cart and remove items from it
 
-### Screenshot
+### Screenshots
 
-<div style="display: flex; gap: 10px">
-  <img src=".github/desktopScreenshot.png" width="70%" height="700">
-  <img src=".github/mobileScreenshot.png" width="30%" height="700">
+<p align="center">
+  <img src=".github/desktopScreenshot.png" width="100%">
+</p>
+
+<div style="display: flex; justify-content: center; gap: 15px">
+  <img src=".github/mobileScreenshot.png" width="50%" >
+  <img src=".github/cartScreenshot.png" width="50%" >
 </div>
 
 ### Links
@@ -50,49 +54,74 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS modules
 - CSS Variables
-- typeScript
+- TypeScript
 - Flexbox
 - React
 - ReactDOM (for portals)
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- Gained hands-on experience with TypeScript, including typing props and state in React
+- Learned to use CSS variables for consistent theming and easier maintenance
+- Practiced a mobile-first workflow, ensuring layouts scale nicely across devices.
+- Improved creating portals with ReactDOM.createPortal for modals/lightbox.
+- Improved skills in React component structuring and state management with props.
+- Explored React Context API for potential shared state management (cart state), planning to implement fully in future iterations.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
+```tsx
+<>
+  <button
+    className={`${styles.arrow} ${styles.left_arrow} ${styles[variant]}`}
+    onClick={onPrev}
+    aria-label="Previous image"
+  >
+    <img src={iconPrevious} alt="" />
+  </button>
+  <button
+    className={`${styles.arrow} ${styles.right_arrow} ${styles[variant]}`}
+    onClick={onNext}
+    aria-label="Next image"
+  >
+    <img src={iconNext} alt="" />
+  </button>
+</>
 ```
 
+I’m proud of this snippet because it shows how I componentized the carousel arrows for reusability across different components, keeping the markup clean and accessible.
+
+The onNext and onPrev functions handle the current image index, allowing smooth navigation between images in both the mobile gallery and the lightbox.
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.arrow {
+  position: absolute; /* Posição controlada pelo pai */
+  top: 45%;
+  border: none;
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  width: 37px;
+  height: 37px;
+  -webkit-tap-highlight-color: transparent; /* Previne o efeito de highlight no mobile */
+  z-index: 1;
+}
+
+.arrow:active {
+  transform: scale(0.95); /* Efeito de clique */
+  transition: transform 0.1s ease;
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I'm proud of this CSS because it allows the arrows to be reused in different components, with their position being controlled by the parent component.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I plan to implement Context API for the cart state to reduce prop drilling, refine the lightbox carousel functionality, and improve accessibility across all components.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Even though TypeScript already provides strong typing, I plan to add more documentation for the props and functions. I also want to refine the TSX structure, focusing on better semantics and accessibility.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+Coming soon – I didn’t use specific resources beyond documentation this time.
 
 ## Author
 
