@@ -18,17 +18,23 @@ type thumbnailsProps = {
 function Thumbnails({ gallery, currentImageIndex, onSelect, onChangeIndex, mode = "default" }: thumbnailsProps) {
   const [activeThumbnail, setActiveThumbnail] = useState(gallery[0].thumbnail);
 
+  const handleActiveThumbnail = (thumbnail: string, thumbnailIndex: number) => {
+    if (
+      (activeThumbnail === thumbnail && mode === "default") ||
+      (currentImageIndex === thumbnailIndex && mode === "lightbox")
+    ) {
+      return styles.active_thumbnail;
+    }
+
+    return "";
+  };
+
   return (
     <ul className={`${styles.thumbnail_images} ${mode === "lightbox" ? styles.lightbox_mode : ""}`}>
       {gallery.map((item, index) => (
         <li key={index}>
           <button
-            className={`${styles.thumbnail_button} ${
-              (activeThumbnail === item.thumbnail && mode === "default") ||
-              (currentImageIndex === index && mode === "lightbox")
-                ? styles.active_thumbnail
-                : ""
-            }`}
+            className={`${styles.thumbnail_button} ${handleActiveThumbnail(item.thumbnail, index)}`}
             onClick={() => {
               if (onSelect) onSelect(item.image);
               if (onChangeIndex) onChangeIndex(index);
