@@ -1,9 +1,9 @@
 .arrow {
-  position: absolute;
+  position: absolute; /* Posição controlada pelo pai */
   top: 45%;
   border: none;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: hsl(0, 0%, 100%);
   cursor: pointer;
   width: 37px;
   height: 37px;
