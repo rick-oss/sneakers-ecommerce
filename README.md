@@ -36,9 +36,9 @@ Users should be able to:
   <img src=".github/desktopScreenshot.png" width="100%">
 </p>
 
-<div style="display: flex; justify-content: center; gap: 15px">
-  <img src=".github/mobileScreenshot.png" width="50%" >
-  <img src=".github/cartScreenshot.png" width="50%" >
+<div style="display: flex; justify-content: center; gap: 10px">
+  <img src=".github/mobileScreenshot.png" width="49%" >
+  <img src=".github/cartScreenshot.png" width="49%" >
 </div>
 
 ### Links
