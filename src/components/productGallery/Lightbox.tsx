@@ -25,12 +25,10 @@ function Lightbox({ lightboxGallery, currentIndex, onChangeIndex, onClose, onPre
 
   if (!lightbox) return null;
   return ReactDom.createPortal(
-    <section className={styles.lightbox} role="dialog" aria-modal="true">
-      <div className={styles.lightbox_content}>
-        <div className={styles.close_lightbox}>
-          <button onClick={onClose}>
-            <FaX className={styles.icon_button} />
-          </button>
+    <section className={styles.lightbox} onClick={onClose} role="dialog" aria-modal="true">
+      <div className={styles.lightbox_content} onClick={(e) => e.stopPropagation()}>
+        <div className={styles.close_lightbox} onClick={onClose}>
+          <FaX className={styles.close_button} />
         </div>
         <CarouselGallery
           images={lightboxGallery.map((item) => item.image)}
