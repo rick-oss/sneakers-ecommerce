@@ -104,6 +104,12 @@
   }
 }
 
+@media (min-width: 960px) and (hover: hover) and (pointer: fine) {
+  .checkout_button:hover {
+    box-shadow: 0 0 20px var(--color-accent);
+  }
+}
+
 @media (min-width: 1280px) {
   .cart_dropdown {
     right: 5%;

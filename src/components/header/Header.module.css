@@ -67,7 +67,7 @@
 @media (min-width: 520px) {
   .header_wrapper {
     max-width: 100%;
-    border-bottom: 1px solid hsl(223, 64%, 98%);
+    border-bottom: 1px solid hsl(220, 14%, 75%);
   }
 
   .header_left {
@@ -104,6 +104,16 @@
   }
 }
 
+@media (min-width: 960px) and (hover: hover) and (pointer: fine) {
+  .header_right .cart_button:hover {
+    color: var(--primary-color);
+  }
+
+  .image_profile:hover {
+    border: 2px solid var(--color-accent);
+  }
+}
+
 @media (min-width: 1024px) {
   .header_wrapper {
     height: 106px;
@@ -116,9 +126,5 @@
 
   .image_profile {
     width: 45px;
-  }
-
-  .image_profile:hover {
-    border: 2px solid var(--color-accent);
   }
 }
