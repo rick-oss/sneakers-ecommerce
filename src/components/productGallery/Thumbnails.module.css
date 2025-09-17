@@ -44,17 +44,18 @@
   opacity: 1;
 }
 
-.lightbox_mode {
-  max-width: 35%;
-  margin-top: 40px;
+@media (min-width: 960px) {
+  .lightbox_mode {
+    width: 85%;
+  }
 }
 
-@media (min-width: 1440px) {
-  .thumbnail_images {
-    margin-top: 30px;
+@media (min-width: 1440px) and (min-height: 850px) {
+  .lightbox_mode {
+    margin-top: 40px;
   }
 
-  .lightbox_mode {
-    max-width: 42%;
+  .lightbox_mode .thumbnail_button {
+    width: 90px;
   }
 }
