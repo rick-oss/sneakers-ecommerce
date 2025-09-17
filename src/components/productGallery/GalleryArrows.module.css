@@ -92,11 +92,11 @@
   }
 
   .left_arrow {
-    left: 22%;
+    left: -5%;
   }
 
   .right_arrow {
-    right: 22%;
+    right: -5%;
   }
 }
 
@@ -111,9 +111,5 @@
     width: 14px;
     height: 14px;
   }
-
-  .left_arrow,
-  .right_arrow {
-    top: 40%;
-  }
 }
+
