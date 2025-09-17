@@ -3,6 +3,7 @@
   justify-content: center;
   max-width: 100%;
   min-height: 100dvh;
+  padding-bottom: 50px; /* Remove quebra de contéudo entre 640px e 840px de altura*/
   text-align: center;
   background-color: var(--light-bg-color);
 }
