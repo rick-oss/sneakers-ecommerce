@@ -47,17 +47,16 @@
   justify-content: space-between;
   align-items: center;
   margin: 20px 20px 0;
-  padding: 15px 5%;
   border-radius: 10px;
   background-color: hsl(223, 64%, 98%);
 }
 
 .quantity_input .minus_button {
-  padding-bottom: 3px;
+  padding: 16px 20px 18px;
 }
 
 .quantity_input .plus_button {
-  padding-top: 3px;
+  padding: 18px 20px 16px;
 }
 
 .add_to_cart button {
@@ -71,7 +70,7 @@
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  padding: 15px 0;
+  padding: 16px 0;
   margin: 15px 20px 0;
   border-radius: 10px;
   gap: 12px;
@@ -144,6 +143,10 @@
     text-align: right;
     padding: 0 20px 0 0;
   }
+
+  .add_to_cart .add_button:hover {
+    box-shadow: 0 0 20px var(--color-accent);
+  }
 }
 
 /* Media queries*/
@@ -170,7 +173,14 @@
   .quantity_input {
     width: 30%;
     margin: 0 15px 0 20px;
-    padding: 15px 3%;
+  }
+
+  .quantity_input .minus_button {
+    padding: 16px 15px 18px;
+  }
+
+  .quantity_input .plus_button {
+    padding: 18px 15px 16px;
   }
 
   .add_to_cart .add_button {
