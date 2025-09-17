@@ -8,9 +8,9 @@
 }
 
 .thumbnail_images .thumbnail_button {
-  border: none;
   background: none;
   cursor: pointer;
+  border: 2px solid transparent;
   border-radius: 10px;
   position: relative;
 }
